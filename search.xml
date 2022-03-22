@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>hello-world</title>
+      <link href="/2022/03/21/hello-world/"/>
+      <url>/2022/03/21/hello-world/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在Ubuntu中部署django</title>
+      <link href="/2022/03/18/%E5%9C%A8Ubuntu%E4%B8%AD%E9%83%A8%E7%BD%B2django/"/>
+      <url>/2022/03/18/%E5%9C%A8Ubuntu%E4%B8%AD%E9%83%A8%E7%BD%B2django/</url>
+      
+        <content type="html"><![CDATA[<span id="more"></span><h2 id="python输出"><a href="#python输出" class="headerlink" title="python输出"></a>python输出</h2><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'hello world'</span><span class="token punctuation">)</span></code></pre><h2 id="python输入"><a href="#python输入" class="headerlink" title="python输入"></a>python输入</h2><pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'hello world'</span><span class="token punctuation">)</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> django </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
