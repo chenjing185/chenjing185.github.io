@@ -1,0 +1,230 @@
+mode: auto
+
+# 头像
+avatar:
+  url: /images/LastEmbryo.jpg
+  status:
+    enable: true
+    emoji: 🌑
+    message: Looking for dawn.
+
+# 标签云
+wordcloud:
+  enable: true
+  height: 650
+
+# 搜索
+engine_search:
+  enable: false
+
+local_search:
+  enable: true
+
+# 文章信息
+post_meta:
+  item_text: false
+  created_at: true
+  updated_at: true
+  categories: true
+  tags: true
+
+# 女孩们
+girls:
+  enable: true
+
+# 特殊页面
+pages:
+  - name: 我的小伙伴们
+    url: /links/
+    icon: icon-genderless-line
+    color: dodgerblue
+  - name: 喜欢的女孩子
+    url: /girls/
+    icon: icon-women-line
+    color: hotpink
+  - name: 我的相册
+    url: /albums/
+    icon: icon-train-line
+    color: Aqua 
+
+# 相册
+albums:
+  enable: true
+
+# pjax
+pjax:
+  enable: true
+
+# 文章分类链接-点击标题跳转链接
+types:
+  link:
+    color: blue
+    icon: icon-external-link-line
+  bilibili:
+    color: "#FF8EB3"
+    icon: icon-bilibili-line
+  douban:
+    color: "#007722"
+    icon: icon-douban-line
+  github:
+    color: black
+    icon: icon-github-line
+  netease-cloud-music:
+    color: "#C10D0C"
+    icon: icon-netease-cloud-music-line
+  notion:
+    color: black
+    icon: icon-notion
+  twitter:
+    color: "#1da1f2"
+    icon: icon-twitter-line
+  zhihu:
+    color: "#0084FF"
+    icon: icon-zhihu-line
+
+
+# 字数统计
+wordcount:
+  enable: true
+  count: true
+  time: true
+
+banner:
+  enable: true
+  title: 箱中世界
+  border: true
+  cloud:
+    enable: true
+    color: "blue"
+  go_down:
+    enable: true
+    icon: icon-arrow-down-s-line
+
+# 评论
+comment:
+  candidates:
+      waline
+  tips:
+    - 如果您有任何关于博客内容的相关讨论，欢迎移步下面的评论区与我交流。
+
+waline:
+  enable: true
+  serverURL: https://chenjing185.github.io
+  visitor: true
+  comment: true
+  emoji:
+    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/
+    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/weibo/
+    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/qq/
+  locale:
+    placeholder: 填写邮箱，可以收到回复通知哦～
+  requiredMeta: ["nick"]
+
+
+# 分析统计
+busuanzi:
+  enable: true
+  site_uv: true
+  site_uv_icon: icon-user-line
+  site_pv: true
+  site_pv_icon: icon-eye-line
+  page_pv: true
+  page_pv_icon: icon-eye-line
+
+# 鼠标效果
+cursor:
+  enable: true
+  default: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/pointer.cur
+  pointer: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur
+  text: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/text.cur
+
+# 赞赏
+reward:
+  enable: true
+  icon: icon-hand-coin-line
+  comment: 如果这篇文章对您有所帮助的话,希望您能请作者喝杯咖啡
+  methods:
+    - name: 支付宝
+      path: /images/zfb.jpg
+      color: "#00A3EE"
+      icon: icon-alipay-line
+    - name: 微信支付
+      path: /images/wx.png
+      color: "#2DC100"
+      icon: icon-wechat-pay-line
+
+tags:
+  动画: crimson
+  漫画: orange
+  轻小说: saddlebrown
+  教程: royalblue
+  笔记: dimgray
+  分享: "#0078e7"
+  随笔: mediumpurple
+  Linux: "#2577b1"
+
+# 代码高亮
+codeblock:
+  copy_btn: true
+
+# 文章目录
+toc:
+  list_number: true
+  max_depth: 6
+  min_depth: 1
+  placeholder: 很遗憾，咱没写啥目录
+  collapse: false
+
+# 页面尾部
+footer:
+  since: 2022
+  icon:
+    url: https://sponsors.yunyoujun.cn
+    title: 驰骋箱庭中的英杰们
+  live_time:
+    enable: true
+    prefix: 本博客已萌萌哒地运行
+    suffix: (●'◡'●)
+    start_time: "2022-03-20T00:00:00"
+  support:
+    enable: true
+    title: 又拍云
+    link: https://www.upyun.com
+    logo: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png
+    prefix: 本网站由
+    suffix: 提供 CDN 加速
+
+# 左侧链接
+social:
+  - name: QQ 1050458482
+    link: http://wpa.qq.com/msgrd?v=3&uin=2634687521&site=qq&menu=yes
+    icon: icon-qq-line
+    color: "#12B7F5"
+  - name: GitHub
+    link: https://github.com/chenjing185
+    icon: icon-github-line
+    color: "#6e5494"
+  - name: 豆瓣
+    link: https://www.douban.com/people/187322196
+    icon: icon-douban-line
+    color: "#007722"
+  - name: 网易云音乐
+    link: https://music.163.com/#/user/home?id=380939349
+    icon: icon-netease-cloud-music-line
+    color: "#C20C0C"
+  - name: 知乎
+    link: https://www.zhihu.com/people/zui-ai-shi-shen-tian-xia
+    icon: icon-zhihu-line
+    color: "#0084FF"
+  - name: 哔哩哔哩
+    link: https://space.bilibili.com/39080563
+    icon: icon-bilibili-line
+    color: "#FF8EB3"
+  - name: Twitter
+    link: https://twitter.com/home
+    icon: icon-twitter-line
+    color: "#1da1f2"
+  - name: E-Mail
+    link: mailto:adf13148320@163.com
+    icon: icon-mail-line
+    color: "#8E71C1"
