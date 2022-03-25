@@ -6,14 +6,16 @@ categories:
 tags: 
 - django
 - Ubuntu
+- bug
 toc: true
 readmore: true
 sticky: 100
-comments: false
+comments: true
 ---
+这是作者本人在Ubuntu中部署django中遇到的一些问题
 <!-- more -->
 ## python输出
-``` python
+```python
 print('hello world')
 ```
 ## python输入
