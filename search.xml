@@ -21,7 +21,7 @@
       <link href="/2022/03/18/%E5%9C%A8Ubuntu%E4%B8%AD%E9%83%A8%E7%BD%B2django/"/>
       <url>/2022/03/18/%E5%9C%A8Ubuntu%E4%B8%AD%E9%83%A8%E7%BD%B2django/</url>
       
-        <content type="html"><![CDATA[<p>这是作者本人在Ubuntu中部署django中遇到的一些问题</p><h2 id="一-Ubuntu中安装nginx报错struct-crypt-data’-has-no-member-named-‘current-salt’"><a href="#一-Ubuntu中安装nginx报错struct-crypt-data’-has-no-member-named-‘current-salt’" class="headerlink" title="一.Ubuntu中安装nginx报错struct crypt_data’ has no member named ‘current_salt’"></a>一.Ubuntu中安装nginx报错struct crypt_data’ has no member named ‘current_salt’</h2><p><img src="C:\Users\陈靖\Pictures\Saved%20Pictures\2.png" loading="lazy"></p><p>问题原因: nginx的版本高或者服务器版本高的问题</p><p>解决方法: 在nginx安装目录下找到src&#x2F;os&#x2F;unix&#x2F;ngx_user.c文件,使用vim打开,将&#x2F;* cd.current_salt[0] &#x3D; ~salt[0]:*&#x2F;这行注释就行了</p>]]></content>
+        <content type="html"><![CDATA[<p>这是作者本人在Ubuntu中部署django中遇到的一些问题</p><h2 id="一-Ubuntu中安装nginx报错struct-crypt-data’-has-no-member-named-‘current-salt’"><a href="#一-Ubuntu中安装nginx报错struct-crypt-data’-has-no-member-named-‘current-salt’" class="headerlink" title="一.Ubuntu中安装nginx报错struct crypt_data’ has no member named ‘current_salt’"></a>一.Ubuntu中安装nginx报错struct crypt_data’ has no member named ‘current_salt’</h2><p><img src="/images%5Carticle%5C2.png" loading="lazy"></p><p>问题原因: nginx的版本高或者服务器版本高的问题</p><p>解决方法: 在nginx安装目录下找到src&#x2F;os&#x2F;unix&#x2F;ngx_user.c文件,使用vim打开,将&#x2F;* cd.current_salt[0] &#x3D; ~salt[0]:*&#x2F;这行注释就行了</p>]]></content>
       
       
       <categories>
