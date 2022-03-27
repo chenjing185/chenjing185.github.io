@@ -175,6 +175,13 @@ toc:
   placeholder: 很遗憾，咱没写啥目录
   collapse: false
 
+# 分享版权
+creative_commons:
+  license: by-nc-sa
+  post: true
+  language: deed.zh
+  clipboard: true
+
 # 页面尾部
 footer:
   since: 2022
