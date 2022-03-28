@@ -38,3 +38,4 @@ comments: true
 问题原因: Werror它要求GCC将所有的警告当成错误进行处理 所有导致错误输出 并不能进行下一步
 
 解决方法: 使用vim打开/nginx-1.10.3/objs/Makefile找到 -Werror并去掉在重新make即可
+<!-- more -->
