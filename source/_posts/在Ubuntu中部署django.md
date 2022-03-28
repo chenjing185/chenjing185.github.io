@@ -12,7 +12,9 @@ readmore: true
 sticky: 100
 comments: true
 ---
+
 这是作者本人在Ubuntu中部署django中遇到的一些问题
+
 <!-- more -->
 
 **在Ubuntu中部署django本人是参考的django中文网的**
