@@ -108,7 +108,7 @@ comment:
     - 如果您有任何关于博客内容的相关讨论，欢迎移步下面的评论区与我交流。
 
 github_issues:
-  enable: false
+  enable: true
   username: chenjing185
   repository: chenjing185.github.io
   filters: is:issue
