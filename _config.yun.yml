@@ -103,7 +103,7 @@ banner:
 # 评论
 comment:
   candidates:
-    - github_issues
+    github_issues
   tips:
     - 如果您有任何关于博客内容的相关讨论，欢迎移步下面的评论区与我交流。
 
