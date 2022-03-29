@@ -111,7 +111,6 @@ github_issues:
   enable: true
   username: chenjing185
   repository: chenjing185.github.io
-  filters: is:issue
 
 # 分析统计
 busuanzi:
