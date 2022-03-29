@@ -103,22 +103,19 @@ banner:
 # 评论
 comment:
   candidates:
-      waline
+      giscus
   tips:
     - 如果您有任何关于博客内容的相关讨论，欢迎移步下面的评论区与我交流。
 
-waline:
+giscus:
   enable: true
-  serverURL: https://chenjing185.github.io
-  visitor: true
-  comment: true
-  emoji:
-    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/
-    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/weibo/
-    - https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/qq/
-  locale:
-    placeholder: 填写邮箱，可以收到回复通知哦～
-  requiredMeta: ["nick"]
+  repo: chenjing185/chenjing185.github.io
+  repo-id:
+  category-id:
+  mapping: pathname
+  reactions-enabled: 1
+  emit-metadata: 0
+  theme: light
 
 
 # 分析统计
