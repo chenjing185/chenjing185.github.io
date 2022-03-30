@@ -103,14 +103,14 @@ banner:
 # 评论
 comment:
   candidates:
-    - github_issues
+    - github_discussions
   tips:
     - 如果您有任何关于博客内容的相关讨论，欢迎移步Github Issues与我交流。
 
-github_issues:
+github_discussions:
   enable: true
-  username: chenjing185
-  repository: chenjing185.github.io
+  username: YunYouJun
+  repository: yunyoujun.github.io
 
 # 分析统计
 busuanzi:
