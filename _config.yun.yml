@@ -105,7 +105,7 @@ comment:
   candidates:
     - github_discussions
   tips:
-    - 如果您有任何关于博客内容的相关讨论，欢迎移步Github Issues与我交流。
+    - 如果您有任何关于博客内容的相关讨论，欢迎移步Github Discussions与我交流。
 
 github_discussions:
   enable: true
