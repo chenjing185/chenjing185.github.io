@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>响应式网页设计-基础HTML和HTML5</title>
+      <link href="/2022/04/01/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1-%E5%9F%BA%E7%A1%80HTML%E5%92%8CHTML5/"/>
+      <url>/2022/04/01/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1-%E5%9F%BA%E7%A1%80HTML%E5%92%8CHTML5/</url>
+      
+        <content type="html"><![CDATA[<p>大部分 HTML 元素都有一个开始标签和一个结束标签。<br>开始标签像这样：</p><pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span></code></pre><p>结束标签像这样：</p><pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span></code></pre><p>开始标签和结束标签的唯一区别就是结束标签多了一个斜杠。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 响应式网页设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+            <tag> HTML5 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hello-world</title>
       <link href="/2022/03/21/hello-world/"/>
       <url>/2022/03/21/hello-world/</url>
