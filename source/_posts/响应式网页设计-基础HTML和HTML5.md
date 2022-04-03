@@ -249,7 +249,7 @@ div 元素也叫内容划分元素，是一个包裹其他元素的通用容器�
 </html>
 ```
 
-## 定义 HTML 文档的 head 和 body
+## 定义HTML文档的head和body
 html 的结构主要分为两大部分：head 和 body。 网页的描述应放入 head 标签， 网页的内容（向用户展示的）则应放入 body 标签。
 比如 link、meta、title 和 style 都应放入 head 标签。
 这是网页布局的一个例子：
