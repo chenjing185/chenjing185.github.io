@@ -120,7 +120,7 @@ Here's a link to www.freecodecamp.org for you to follow.
 ## 列表标签
 ### 无序列表
 HTML 有一个特定的元素用于创建无序列表。
-无序列表以 <ul> 开始，中间包含一个或多个 <li> 元素， 最后以 </ul> 结束。
+无序列表以ul开始，中间包含一个或多个li元素， 最后以/ul结束。
 例如:
 ```html
 <ul>
@@ -132,7 +132,7 @@ HTML 有一个特定的元素用于创建无序列表。
 
 ### 有序列表
 HTML 中有用于创建有序列表的特定元素。
-有序列表以 <ol> 开始，中间包含一个或多个 <li> 元素。 最后以 </ol> 结束。
+有序列表以ol开始，中间包含一个或多个li元素。 最后以/ol结束。
 例如:
 ```html
 <ol>
@@ -141,3 +141,92 @@ HTML 中有用于创建有序列表的特定元素。
 </ol>
 ```
 将创建一个包含 Garfield 和 Sylvester 的编号列表。
+
+## 输入框标签
+input 输入框可以让你轻松获得用户的输入。你可以像这样创建一个文本输入框：
+```html
+<input type="text">
+```
+注意 input 输入框是没有结束标签的。
+
+## 给输入框添加占位符文本
+占位符文本是用户在 input 输入框中输入任何东西前的预定义文本。你可以像这样创建一个占位符：
+```html
+<input type="text" placeholder="this is placeholder text">
+```
+注意： 别忘了 input 元素是 "自闭和标签"，即不需要结束标签。
+
+## 表单
+### 创建表单
+我们可以只通过 HTML 来实现发送数据给服务器的表单， 只需要给 form 元素添加 action 属性即可。例如：
+```html
+<form action="url-where-you-want-to-submit-form-data">
+  <input>
+</form>
+```
+
+### 给表单添加提交按钮
+给表单添加一个 submit（提交）按钮。 点击提交按钮时，表单中的数据将会被发送到 action 属性指定的 URL 上。例如：
+```html
+<button type="submit">this button submits the form</button>
+```
+
+### 给表单添加一个必填字段
+当你设计表单时，你可以指定某些字段为必填项（required），只有当用户填写了该字段后，才可以提交表单。
+如果你想把文本输入框设置为必填项，在 input 元素中加上 required 属性就可以了，例如：
+```html
+<input type="text" required>
+```
+
+## 单选框和复选框
+### 创建一组单选按钮
+单选按钮是 input 选择框的一种类型。
+每一个单选按钮都应该嵌套在它自己的 label（标签）元素中。 这样，我们相当于给 input 元素和包裹它的 label 元素建立起了对应关系。
+所有关联的单选按钮应该拥有相同的 name 属性。 创建一组单选按钮，选中其中一个按钮，其他按钮即显示为未选中，以确保用户只提供一个答案。
+下面是一个单选按钮的例子：
+```html
+<label> 
+  <input type="radio" name="indoor-outdoor">Indoor 
+</label>
+```
+最佳实践是在 label 元素上设置 for 属性，让其值与相关联的 input 单选按钮的 id 属性值相同。 这使得辅助技术能够在标签和相关的 input 元素之间建立关联关系。 例如：
+```html
+<input id="indoor" type="radio" name="indoor-outdoor">
+<label for="indoor">Indoor</label>
+```
+我们也可以在 label 标签中嵌入 input 元素：
+```html
+<label for="indoor"> 
+  <input id="indoor" type="radio" name="indoor-outdoor">Indoor 
+</label>
+```
+
+### 创建一组复选框
+复选框是 input 选择框的一种类型。
+每一个复选框都应该嵌套在它自己的 label（标签）元素中。这样我们相当于给 input 元素和包裹它的 label 元素建立起了对应关系。所有关联的复选框应该拥有相同的 name 属性。
+使得 input 与 label 关联的最佳实践是在 label 元素上设置 for 属性，让其值与相关联的 input 复选框的 id 属性值相同。
+下面是一个复选框的例子：
+```html
+<label for="loving"><input id="loving" type="checkbox" name="personality"> Loving</label>
+```
+
+### 使用单选框和复选框的value属性
+提交表单时，所选项的值会发送给服务端。 radio 和 checkbox 的 value 属性值决定了发送到服务端的实际内容。
+例如：
+```html
+<label for="indoor">
+  <input id="indoor" value="indoor" type="radio" name="indoor-outdoor">Indoor
+</label>
+<label for="outdoor">
+  <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
+</label>
+```
+这里有两个 radio 单选框。 当用户提交表单时，如果 indoor 选项被选中，表单数据会包含：indoor-outdoor=indoor。 也就是所选项的 name 和 value 属性值。
+如果没有指明 value 属性值，则会使用默认值做为表单数据提交，也就是 on。 在这种情况下，如果用户选中 "indoor" 选项然后提交表单，表单数据则会包含 indoor-outdoor=on。 这样的表单数据看起来不够直观，因此最好将 value 属性值设置为一些有意义的内容。
+
+### 给单选按钮和复选框添加默认选中项
+用 checked 属性把第一个复选框和单选按钮都设置为默认选中。
+为此，只需将单词 checked 添加到 input 元素的内部。 例如:
+```html
+<input type="radio" name="test-name" checked>
+```
