@@ -8,14 +8,12 @@
       <link href="/2022/04/03/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1-%E5%9F%BA%E7%A1%80CSS/"/>
       <url>/2022/04/03/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1-%E5%9F%BA%E7%A1%80CSS/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>CSS（级联样式表）告诉浏览器如何显示你在 HTML 中写入的文本和其他内容。你可以使用 CSS 控制 HTML 元素的颜色、字体、大小、间距等许多属性。</p><span id="more"></span>]]></content>
       
       
       <categories>
           
           <category> 响应式网页设计 </category>
-          
-          <category> freecodecamp </category>
           
       </categories>
       
@@ -41,8 +39,6 @@
       <categories>
           
           <category> 响应式网页设计 </category>
-          
-          <category> freecodecamp </category>
           
       </categories>
       
