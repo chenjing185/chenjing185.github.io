@@ -115,7 +115,7 @@ CSS 边框具有 style、color、width 属性。
   }
 </style>
 ```
-### 用 border-radius 添加圆角边框
+### 用border-radius添加圆角边框
 边框的四个角看起来很尖锐， 我们可以使用border-radius属性来让它变得圆润。
 ```html
 <style>
