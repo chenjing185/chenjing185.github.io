@@ -9,7 +9,7 @@ tags:
 - bug
 toc: true
 readmore: true
-sticky: 100
+sticky: 0
 comments: true
 ---
 
