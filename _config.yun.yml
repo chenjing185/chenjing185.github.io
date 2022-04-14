@@ -89,6 +89,12 @@ wordcount:
   count: true
   time: true
 
+# CDN
+cdn:
+  pre: https://cdn.jsdelivr.net/gh/chenjing185/chenjing185.github.io@latest
+
+
+# 首页标语动画
 banner:
   enable: true
   title: 箱中世界Hakoniwa
