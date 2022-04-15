@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>响应式网页设计项目</title>
+      <link href="/2022/04/16/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E9%A1%B9%E7%9B%AE/"/>
+      <url>/2022/04/16/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E9%A1%B9%E7%9B%AE/</url>
+      
+        <content type="html"><![CDATA[<p>CSS 网格是一个较新的标准，用于构建复杂的响应布局。它通过把 HTML 元素转换为具有行和列的网格容器，以便将子元素放置在所需要的位置。</p><span id="more"></span><h2 id="制作一个致敬页"><a href="#制作一个致敬页" class="headerlink" title="制作一个致敬页"></a>制作一个致敬页</h2><p>目标： 在 CodePen.io 上创建一个与这个功能类似的 app：<a href="https://codepen.io/freeCodeCamp/full/zNqgVx%E3%80%82">https://codepen.io/freeCodeCamp/full/zNqgVx。</a></p><p>在满足以下 需求 并能通过所有测试的前提下， 你可以根据自己的喜好来美化你的 app。</p><p>你可以使用 HTML、JavaScript 以及 CSS 来完成项目。 由于目前你只学到了 CSS 课程，所以我们建议你只使用 CSS 来完成这个项目，同时巩固一下你之前所学的内容。 你也可以使用 Bootstrap 或者 SASS。 我们不推荐你在这个项目中使用其他技术（比如 jQuery、React、Angular 或 Vue）。 在后续的其他项目中，你将有机会使用像是 React 等其他技术栈。 我们会接受并尝试修复你在使用推荐技术栈创建项目时报告的问题。 祝你编码愉快！</p><p>需求 1： 此 app 中应存在一个 id&#x3D;”main” 的元素，页面上的所有元素都应置于这个元素中。</p><p>需求 2： 此 app 中应存在一个 id&#x3D;”title” 的元素，其中包含描述致敬页主题的字符串文本，如 “Dr. Norman Borlaug”。</p><p>需求 3： 此 app 中应存在一个 id&#x3D;”img-div” 的 figure 或 div 元素。</p><p>需求 4： 在 img-div 元素内，应存在一个 id&#x3D;”image” 的 img 元素。</p><p>需求 5： 在 img-div 元素内，应存在一个相应的 id&#x3D;”img-caption” 的元素，其中包含对 img-div 中图像的描述文本。</p><p>需求 6： 此 app 中应存在一个 id&#x3D;”tribute-info” 的元素，其中应包含描述致敬页主题的内容文本。</p><p>需求 7： 此 app 中应存在一个 id&#x3D;”tribute-link” 的 a 元素，它应链接到一个包含有关致敬页主题额外信息的外部网页。 提示：你必须为 a 元素提供 target 属性，并将其属性值设置为 _blank（即 target&#x3D;”_blank”），这样才可以在新选项卡中打开链接。</p><p>需求 8： img 元素应相对于其父元素的宽度自动调整大小，但不超过图片的原始大小。</p><p>需求 9： img 应在其父元素内居中。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 响应式网页设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 项目 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>响应式网页设计-CSS网格</title>
       <link href="/2022/04/14/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1-CSS%E7%BD%91%E6%A0%BC/"/>
       <url>/2022/04/14/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1-CSS%E7%BD%91%E6%A0%BC/</url>
