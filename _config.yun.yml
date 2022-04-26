@@ -110,14 +110,20 @@ banner:
 comment:
   enable: true
   candidates:
-    - github_discussions
+    - giscus
   tips:
     - 如果您有任何关于博客内容的相关讨论，欢迎移步Github Discussions与我交流。
 
-github_discussions:
+giscus:
   enable: true
-  username: chenjing185
-  repository: chenjing185.github.io
+  repo:
+  repo-id:
+  category:
+  category-id:
+  mapping: pathname
+  reactions-enabled: 1
+  emit-metadata: 0
+  theme: light
 
 # 分析统计
 busuanzi:
