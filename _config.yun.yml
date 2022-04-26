@@ -108,6 +108,7 @@ banner:
 
 # 评论
 comment:
+  enable: true
   candidates:
     - github_discussions
   tips:
