@@ -110,20 +110,15 @@ banner:
 comment:
   enable: true
   candidates:
-    - giscus
+    - minivaline
   tips:
     - 如果您有任何关于博客内容的相关讨论，欢迎移步Github Discussions与我交流。
 
-giscus:
+minivaline:
   enable: true
-  repo:
-  repo-id:
-  category:
-  category-id:
-  mapping: pathname
-  reactions-enabled: 1
-  emit-metadata: 0
-  theme: light
+  md: true
+  backend: waline
+  serverURL: https://waline.vercel.app
 
 # 分析统计
 busuanzi:
