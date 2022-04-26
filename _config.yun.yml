@@ -110,15 +110,15 @@ banner:
 comment:
   enable: true
   candidates:
-    - minivaline
+    - github_issues
   tips:
     - 如果您有任何关于博客内容的相关讨论，欢迎移步Github Discussions与我交流。
 
-minivaline:
+github_issues:
   enable: true
-  md: true
-  backend: waline
-  serverURL: https://waline.vercel.app
+  username: YunYouJun
+  repository: yunyoujun.github.io
+  filters: is:issue
 
 # 分析统计
 busuanzi:
