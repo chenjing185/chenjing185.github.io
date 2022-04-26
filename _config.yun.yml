@@ -112,7 +112,7 @@ comment:
   candidates:
     - github_issues
   tips:
-    - 如果您有任何关于博客内容的相关讨论，欢迎移步Github Discussions与我交流。
+    - 如果您有任何关于博客内容的相关讨论，欢迎移步Github issues与我交流。
 
 github_issues:
   enable: true
