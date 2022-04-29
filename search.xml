@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>基础JavaScript</title>
+      <link href="/2022/04/29/%E5%9F%BA%E7%A1%80JavaScript/"/>
+      <url>/2022/04/29/%E5%9F%BA%E7%A1%80JavaScript/</url>
+      
+        <content type="html"><![CDATA[<p>JavaScript 是一种用于网页交互的脚本语言。它和 HTML 和 CSS 一样，是网站的核心技术之一。所有现代浏览器都支持 JavaScript。</p><span id="more"></span>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript算法和数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>响应式网页设计项目</title>
       <link href="/2022/04/16/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E9%A1%B9%E7%9B%AE/"/>
       <url>/2022/04/16/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E9%A1%B9%E7%9B%AE/</url>
@@ -210,19 +235,6 @@
             <tag> HTML5 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>hello-world</title>
-      <link href="/2022/03/21/hello-world/"/>
-      <url>/2022/03/21/hello-world/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
       
     </entry>
     
