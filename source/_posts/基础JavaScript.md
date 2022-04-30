@@ -134,17 +134,6 @@ FAV_PET = "Dogs";
 你应该始终使用 const 关键字命名不想重新分配的变量。 这有助于避免给一个常量进行额外的再次赋值。
 
 > 注意： 通常，开发者会用大写字母作为常量标识符，用小写字母或者驼峰命名作为变量（对象或数组）标识符。
-## 加法运算
-Number 是 JavaScript 中的一种数据类型，用来表示数值。
-
-现在我们来尝试在 JavaScript 中做加法运算。
-
-JavaScript 中，我们通过符号 + 来进行加法运算。
-
-代码示例:
-
-const myVar = 5 + 10;
-现在，变量 myVar 的值为 15。
 ## 数字递增
 使用 ++，我们可以很容易地对变量进行自增或者 +1 运算。
 
@@ -207,3 +196,241 @@ const badStr = 'Finn responds, "Let's go!"';
 在上面的 goodStr 中，通过使用反斜杠 \ 转义字符可以安全地使用两种引号。
 
 > 提示： 不要混淆反斜杠 \ 和斜杠 /。 它们不是一回事。
+## 转义字符
+引号不是字符串中唯一可以被转义（escaped）的字符。 使用转义字符有两个原因：
+
+首先是可以让你使用无法输入的字符，例如退格。
+其次是可以让你在一个字符串中表示多个引号，而不会出错。
+我们在之前的挑战中学到了这个。
+
+|代码|输出|
+|:--:|:--:|
+|\'|单引号|
+|\"|双引号|
+|\n|换行符|
+|\r|回车符|
+|\t|制表符|
+|\b|退格|
+|\f|换页符|
+> 请注意，必须对反斜杠本身进行转义，它才能显示为反斜杠。
+## 用加号运算符连接字符串
+在 JavaScript 中，当 + 操作符被用于一个 String 类型的值的时候，它被称作拼接操作符。 你可以通过拼接其他字符串来创建一个新的字符串。
+
+例如：
+```JavaScript
+'My name is Alan,' + ' I concatenate.'
+```
+提示： 注意空格。 拼接操作不会在两个字符串之间添加空格。所以，如果想加上空格的话，你需要自己在字符串里面添加。
+
+例如：
+```JavaScript
+const ourStr = "I come first. " + "I come second.";
+```
+字符串 I come first. I come second. 将显示在控制台中。
+## 用 += 运算符连接字符串
+我们还可以使用 += 运算符来拼接字符串到现有字符串变量的结尾。 对于那些被分割成几段的长的字符串来说，这一操作是非常有用的。
+
+提示： 注意空格。 拼接操作不会在两个字符串之间添加空格，所以，如果想要加上空格的话，你需要自己在字符串里面添加。
+
+例如：
+```JavaScript
+let ourStr = "I come first. ";
+ourStr += "I come second.";
+```
+ourStr 的值为字符串 I come first. I come second.
+## 用变量构造字符串
+有时候你需要创建一个类似 Mad Libs（填词游戏）风格的字符串。 通过使用连接运算符（+），你可以插入一个或多个变量来组成一个字符串。
+
+例如：
+```JavaScript
+const ourName = "freeCodeCamp";
+const ourStr = "Hello, our name is " + ourName + ", how are you?";
+```
+ourStr 值为 Hello, our name is freeCodeCamp, how are you?
+## 将变量追加到字符串
+就像我们可以用多行字符串字面量构建单个字符串一样，我们还可以使用加且赋值（+=）运算符将字符串追加到字符串的末尾。
+
+示例：
+```JavaScript
+const anAdjective = "awesome!";
+let ourStr = "freeCodeCamp is ";
+ourStr += anAdjective;
+```
+ourStr 值为 freeCodeCamp is awesome!。
+## 查找字符串的长度
+你可以通过在字符串变量或字符串后面写上 .length 来获得 String 的长度。
+```JavaScript
+console.log("Alan Peter".length);
+```
+字符串 10 将会出现在控制台中。
+
+例如，如果我们创建了一个变量 const firstName = "Ada"，我们可以通过使用 firstName.length 找出字符串 Ada 的长度属性。
+## 使用方括号查找字符串中的字符
+方括号表示法（Bracket notation）是一种在字符串中的特定 index（索引）处获取字符的方法。
+
+大多数现代编程语言，如 JavaScript，不同于人类从 1 开始计数。 它们是从 0 开始计数。 这被称为基于零（Zero-based）的索引。
+
+例如，单词 Charles 的索引 0 的字符是 C。 所以如果 const firstName = "Charles"，你可以通过 firstName[0] 得到字符串第一个字母的值。
+
+示例：
+```JavaScript
+const firstName = "Charles";
+const firstLetter = firstName[0];
+```
+firstLetter 值为字符串 C 。
+## 了解字符串的不变性
+在 JavaScript 中，字符串（String）的值是不可变的（immutable），这意味着一旦字符串被创建就不能被改变。
+
+例如，下面的代码：
+```JavaScript
+let myStr = "Bob";
+myStr[0] = "J";
+```
+是不会把变量 myStr 的值改变成 Job 的，因为变量 myStr 是不可变的。 注意，这并不意味着 myStr 永远不能被改变，只是字符串字面量 string literal 的各个字符不能被改变。 改变 myStr 的唯一方法是重新给它赋一个值，例如：
+```JavaScript
+let myStr = "Bob";
+myStr = "Job";
+```
+## 使用 JavaScript 数组将多个值存储在一个变量中
+使用数组（array），我们可以在一个地方存储多个数据。
+
+以左方括号开始定义一个数组，以右方括号结束，里面每个元素之间用逗号隔开，例如：
+```JavaScript
+const sandwich = ["peanut butter", "jelly", "bread"];
+```
+## 将一个数组嵌套在另一个数组中
+您也可以在其他数组中嵌套数组，如：
+```JavaScript
+const teams = [["Bulls", 23], ["White Sox", 45]];
+```
+这也叫做多维数组（multi-dimensional array）。
+## 通过索引访问数组中的数据
+我们可以使用索引（indexes）来访问数组中的数据。
+
+数组索引与字符串一样使用方括号来表示，不同的是，它们不是指定字符，而是指定数组中的一个条目。 数组索引与字符串索引一样是从 0 开始（zero-based）的，所以数组中第一个元素的索引编号是 0。
+
+示例
+```JavaScript
+const array = [50, 60, 70];
+array[0];
+const data = array[1];
+```
+现在 array[0] 的值是 50， data 的值为 60.
+
+> **注意**:数组名与方括号之间不应该有任何空格，比如array [0] 。 尽管 JavaScript 能够正确处理这种情况，但是当其他程序员阅读你写的代码时，这可能让他们感到困惑。
+## 通过索引修改数组中的数据
+与字符串不同，数组的条目是 可变的 并且可以自由更改，即使数组是用 const 声明的。
+
+示例
+```JavaScript
+const ourArray = [50, 40, 30];
+ourArray[0] = 15;
+```
+ourArray 值为 [15, 40, 30]。
+## 使用索引访问多维数组
+我们可以把多维数组看作成是数组中的数组。 使用方括号表示法访问数组时，第一个方括号访问的是数组的最外层（第一层），第二个方括号访问的是数组的第二层，以此类推。
+
+例如：
+```JavaScript
+const arr = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14]
+];
+
+arr[3];
+arr[3][0];
+arr[3][0][1];
+```
+arr[3] 为 [[10, 11, 12], 13, 14]，arr[3][0] 为 [10, 11, 12]，并且 arr[3][0][1] 为 11。
+
+注意： 数组名与方括号之间不应该有任何空格，比如 array [0][0] 甚至是 array [0] [0] 都是不允许的。 尽管 JavaScript 能够正确处理这种情况，但是当其他程序员阅读你写的代码时，这可能让他们感到困惑。
+## 使用 push() 操作数组
+一个将数据添加到数组末尾的简单方法是 push() 函数。
+
+.push() 接受一个或多个参数（parameters），并把它压入到数组的末尾。
+
+示例：
+```JavaScript
+const arr1 = [1, 2, 3];
+arr1.push(4);
+
+const arr2 = ["Stimpson", "J", "cat"];
+arr2.push(["happy", "joy"]);
+```
+arr1 现在值为 [1, 2, 3, 4]，arr2 值为 ["Stimpson", "J", "cat", ["happy", "joy"]]。
+## 使用 pop() 操作数组
+改变数组中数据的另一种方法是用 .pop() 函数。
+
+.pop() 函数用来弹出一个数组末尾的值。 我们可以把这个弹出的值赋给一个变量存储起来。 换句话说就是 .pop() 函数移除数组末尾的元素并返回这个元素。
+
+数组中任何类型的元素（数值，字符串，甚至是数组）都可以被弹出来 。
+```JavaScript
+const threeArr = [1, 4, 6];
+const oneDown = threeArr.pop();
+console.log(oneDown);
+console.log(threeArr);
+```
+第一个 console.log 将显示值 6，第二个将显示值 [1, 4]。
+## 使用 shift() 操作数组
+pop() 函数用来移出数组中最后一个元素。 如果想要移出第一个元素要怎么办呢？
+
+这时候我们就需要 .shift() 了。 它的工作原理就像 .pop()，但它移除的是第一个元素，而不是最后一个。
+
+示例：
+```JavaScript
+const ourArray = ["Stimpson", "J", ["cat"]];
+const removedFromOurArray = ourArray.shift();
+```
+removedFromOurArray 值为 Stimpson，ourArray 值为 ["J", ["cat"]]
+## 使用 unshift() 操作数组
+不仅可以 shift（移出）数组中的第一个元素，也可以 unshift（移入）一个元素到数组的头部。
+
+.unshift() 函数用起来就像 .push() 函数一样，但不是在数组的末尾添加元素，unshift() 在数组的头部添加元素。
+
+示例：
+```JavaScript
+const ourArray = ["Stimpson", "J", "cat"];
+ourArray.shift();
+ourArray.unshift("Happy");
+```
+在 shift、ourArray 后值为 ["J", "cat"]。 在 unshift、ourArray 后值为 ["Happy", "J", "cat"]。
+## 用函数编写可重用代码
+在 JavaScript 中，我们可以把代码的重复部分抽取出来，放到一个函数 （functions）中。
+
+举个例子：
+```JavaScript
+function functionName() {
+  console.log("Hello World");
+}
+```
+你可以通过函数名加上后面的小括号来调用（invoke）这个函数，就像这样： functionName(); 每次调用函数时，它都会在控制台上打印消息 Hello World。 每次调用函数时，大括号之间的所有代码都将被执行。
+## 将值传递给带有参数的函数
+函数的参数 （parameters）在函数调用中充当传入函数的输入占位符（也叫形参）。 函数调用时，参数可以为一个或多个。 调用函数时输入（或传递 "passed"）的实际值被称为参数（arguments）。
+
+这是带有两个参数的函数，param1 和 param2：
+```JavaScript
+function testFun(param1, param2) {
+  console.log(param1, param2);
+}
+```
+然后我们可以调用 testFun，就像这样： testFun("Hello", "World");。 我们传入了两个字符串参数， Hello 和 World。 在函数中，param1 等于字符串 Hello 以及 param2 等于字符串 World。 请注意，testFun 函数可以多次调用，每次调用时传递的参数会决定参数的实际值。
+## 使用 return 给函数返回值
+我们可以通过函数的参数（arguments）把值传入函数， 也可以使用 return 语句把数据从一个函数中传出来。
+
+示例
+```JavaScript
+function plusThree(num) {
+  return num + 3;
+}
+
+const answer = plusThree(5);
+```
+answer 的值为 8。
+
+plusThree 带有一个参数（argument）num，并返回（return）一个等于 num + 3 的值。
+## 全局作用域和函数
+在 JavaScript 中，作用域涉及到变量的作用范围。 在函数外定义的变量具有**全局**作用域。 这意味着，具有全局作用域的变量可以在代码的任何地方被调用。
+
+未使用 let 或 const 关键字声明的变量会在 global 范围内自动创建。 当在代码其他地方无意间定义了一个变量，刚好变量名与全局变量相同，这时会产生意想不到的后果。 你应该总是用 let 或 const 声明你的变量。
