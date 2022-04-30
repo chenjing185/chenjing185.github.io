@@ -434,3 +434,30 @@ plusThree 带有一个参数（argument）num，并返回（return）一个等�
 在 JavaScript 中，作用域涉及到变量的作用范围。 在函数外定义的变量具有**全局**作用域。 这意味着，具有全局作用域的变量可以在代码的任何地方被调用。
 
 未使用 let 或 const 关键字声明的变量会在 global 范围内自动创建。 当在代码其他地方无意间定义了一个变量，刚好变量名与全局变量相同，这时会产生意想不到的后果。 你应该总是用 let 或 const 声明你的变量。
+## 局部作用域和函数
+在一个函数内声明的变量，以及该函数的参数都具有局部（local）作用域。 这意味着它们只在该函数内可见。
+
+这是在函数 myTest 内声明局部变量 loc 的例子：
+```JavaScript
+function myTest() {
+  const loc = "foo";
+  console.log(loc);
+}
+
+myTest();
+console.log(loc);
+```
+myTest() 函数调用将在控制台中显示字符串 foo。 console.log(loc) 行（在 myTest 函数之外）将抛出错误，因为 loc 未在函数之外定义。
+## 函数中的全局作用域和局部作用域
+一个程序中有可能具有相同名称的局部变量 和全局变量。 在这种情况下，局部变量将会优先于全局变量。
+
+下面为例：
+```JavaScript
+const someVar = "Hat";
+
+function myFun() {
+  const someVar = "Head";
+  return someVar;
+}
+```
+函数 myFun 将会返回字符串 Head，因为局部变量的优先级更高。

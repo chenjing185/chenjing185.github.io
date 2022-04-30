@@ -120,6 +120,14 @@ github_issues:
   repository: chenjing185.github.io
   filters: is:issue
 
+# 背景图片
+bg_image:
+  enable: true
+  url: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-0-blur-30px.jpg
+  dark: images/黑夜.jpg
+  # blur: 30px # 设置背景模糊程度
+  opacity: 0.8
+
 # 分析统计
 busuanzi:
   enable: true
