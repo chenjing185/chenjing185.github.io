@@ -461,3 +461,196 @@ function myFun() {
 }
 ```
 函数 myFun 将会返回字符串 Head，因为局部变量的优先级更高。
+## 函数也可以返回 undefined
+函数一般用 return 语句来返回值，但这不是必须的。 在函数没有 return 语句的情况下，当你调用它时，该函数会执行内部代码，返回的值是 undefined。
+
+示例
+```JavaScript
+let sum = 0;
+
+function addSum(num) {
+  sum = sum + num;
+}
+```
+addSum(3);
+addSum 是一个没有 return 语句的函数。 该函数将更改全局变量 sum，函数的返回值为 undefined。
+## 使用返回值赋值
+如果你还记得我们在使用赋值运算符存储值中的讨论的话，等号右侧的所有操作都会在赋值之前完成。 这意味着我们可以获取函数的返回值，并将其赋值给一个变量。
+
+假设我们有一个预先定义的函数 sum ，它将两个数相加，然后：
+```JavaScript
+ourSum = sum(5, 12);
+```
+将调用 sum 函数，该函数返回 17 的值并将其分配给 ourSum 变量。
+## 排队
+在计算机科学中队列（queue）是一个抽象的数据结构（Data Structure），队列中的条目都是有秩序的。 新的条目会被加到队列的末尾，旧的条目会从队列的头部被移出。
+例子:
+```JavaScript
+function nextInLine(arr, item) {
+  // 只修改这一行下面的代码
+  let a = 0;
+  let b = 0;
+  a = arr.push(item);
+  b = arr.shift();
+  return b;
+  // 只修改这一行上面的代码
+}
+
+// 设置
+const testArr = [1, 2, 3, 4, 5];
+
+// 显示代码
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+```
+## 理解布尔值
+另一种数据类型是布尔（Boolean）。 布尔值只能是两个值中的一个：true 或者 false。 它非常像电路开关，true 是 “开”，false 是 “关”。 这两种状态是互斥的。
+
+> 注意： 布尔值是不带引号的。 字符串 "true" 和 "false" 不是布尔值，在 JavaScript 中也没有特殊含义。
+## 严格相等
+### 严格相等运算符
+严格相等运算符（===）是相对相等操作符（==）的另一种比较操作符。 与相等操作符转换数据两类型不同，严格相等运算符不会做类型转换。
+
+如果比较的值类型不同，那么在严格相等运算符比较下它们是不相等的，会返回 false 。
+
+示例
+```JavaScript
+3 ===  3  // true
+3 === '3' // false
+```
+在第二个例子中，3 是一个 Number 类型，而 '3' 是一个 String 类型。
+### 严格不等运算符
+严格不相等运算符（!==）与全等运算符是相反的。 这意味着严格不相等并返回 false 的地方，用严格相等运算符会返回 true，反之亦然。 严格不相等运算符不会转换值的数据类型。
+
+示例
+```JavaScript
+3 !==  3  // false
+3 !== '3' // true
+4 !==  3  // true
+```
+## 比较不同值
+相等运算符 (==) 和严格相等运算符 (===),如果要比较的值不是同一类型，相等运算符会先执行数据类型转换，然后比较值。 而严格相等运算符只比较值，不会进行数据类型转换。
+
+示例
+
+3 == '3' 返回 true ，因为 JavaScript 执行了从字符串到数字类型的转换。 3 === '3' 返回 false，因为类型不同且类型转换没有执行。
+
+提示 在 JavaScript 中，你可以使用 typeof 运算符确定变量或值的类型，如下所示：
+```JavaScript
+typeof 3
+typeof '3'
+```
+typeof 3 返回字符串 number，typeof '3' 返回字符串 string。
+## 逻辑运算符
+### 逻辑与运算符
+有时你需要在一次判断中做多个操作。 当且仅当运算符的左边和右边都是 true，逻辑与运算符（&&）才会返回 true。
+
+同样的效果可以通过 if 语句的嵌套来实现：
+```JavaScript
+if (num > 5) {
+  if (num < 10) {
+    return "Yes";
+  }
+}
+return "No";
+```
+只有当 num 的值大于 5 并且小于10 时才会返回 Yes。 相同的逻辑可被写为：
+```JavaScript
+if (num > 5 && num < 10) {
+  return "Yes";
+}
+return "No";
+```
+### 逻辑或运算符
+只要逻辑或运算符（||）两边的任何一个运算的结果是 true，则返回 true。 否则，返回 false。
+
+逻辑或运算符由两个竖线（||）组成。 这个按键位于退格键和回车键之间。
+
+下面这样的语句你应该很熟悉：
+```JavaScript
+if (num > 10) {
+  return "No";
+}
+if (num < 5) {
+  return "No";
+}
+return "Yes";
+```
+只有当 num 大于等于 5 或小于等于 10 时，函数才返回 Yes。 相同的逻辑可以简写成：
+```JavaScript
+if (num > 10 || num < 5) {
+  return "No";
+}
+return "Yes";
+```
+## 分支语句if与else
+### 用 if 语句来表达条件逻辑
+if 语句用于在代码中做出决定。 关键字 if 告诉 JavaScript 在小括号中的条件为真的情况下去执行定义在大括号里面的代码。 这种条件被称为 Boolean 条件，因为他们只可能是 true（真）或 false（假）。
+
+当条件的计算结果为 true，程序执行大括号内的语句。 当布尔条件的计算结果为 false，大括号内的代码将不会执行。
+
+示例
+```JavaScript
+function test (myCondition) {
+  if (myCondition) {
+    return "It was true";
+  }
+  return "It was false";
+}
+
+test(true);
+test(false);
+```
+test(true) 返回字符串 It was true，test(false) 返回字符串 It was false。
+
+当 test 被调用，并且传递进来的参数值为 true 时，if 语句会计算 myCondition 的结果，看它是否为 true。 如果条件为 true，函数会返回 It was true。 当 test 被调用，并且传递进来的参数值为 false 时，myCondition 不 为 true，并且不执行大括号后面的语句，函数返回 It was false。
+### if else 语句中的逻辑顺序
+if、else if 语句中的代码顺序是很重要的。
+
+在条件判断语句中，代码的执行顺序是从上到下，所以你需要考虑清楚先执行哪一句，后执行哪一句。
+
+这有两个例子。
+
+第一个例子：
+
+function foo(x) {
+  if (x < 1) {
+    return "Less than one";
+  } else if (x < 2) {
+    return "Less than two";
+  } else {
+    return "Greater than or equal to two";
+  }
+}
+第二个例子更改了代码的执行顺序：
+
+function bar(x) {
+  if (x < 2) {
+    return "Less than two";
+  } else if (x < 1) {
+    return "Less than one";
+  } else {
+    return "Greater than or equal to two";
+  }
+}
+这两个函数看起来几乎一模一样，我们传一个值进去看看它们有什么区别。
+
+foo(0)
+bar(0)
+foo(0) 将返回字符串 Less than one，bar(0) 将返回字符串 Less than two。
+## 使用 Switch 语句从许多选项中进行选择
+如果你有非常多的选项需要选择，可以使用 switch 语句。 switch 评估一个表达式，将表达式的值与 case 子句匹配。 从第一个匹配的 case 值执行语句，直到遇到 break。
+
+这是 switch 语句的示例：
+```JavaScript
+switch(lowercaseLetter) {
+  case "a":
+    console.log("A");
+    break;
+  case "b":
+    console.log("B");
+    break;
+}
+```
+测试 case 值使用严格相等（===）运算符进行比较。 break 告诉 JavaScript 停止执行 switch 语句。 如果遗漏了 break ，下一个语句将会被执行。
