@@ -639,7 +639,8 @@ function bar(x) {
 foo(0)
 bar(0)
 foo(0) 将返回字符串 Less than one，bar(0) 将返回字符串 Less than two。
-## 使用 Switch 语句从许多选项中进行选择
+## 分支语句switch
+### 使用 Switch 语句从许多选项中进行选择
 如果你有非常多的选项需要选择，可以使用 switch 语句。 switch 评估一个表达式，将表达式的值与 case 子句匹配。 从第一个匹配的 case 值执行语句，直到遇到 break。
 
 这是 switch 语句的示例：
@@ -654,3 +655,92 @@ switch(lowercaseLetter) {
 }
 ```
 测试 case 值使用严格相等（===）运算符进行比较。 break 告诉 JavaScript 停止执行 switch 语句。 如果遗漏了 break ，下一个语句将会被执行。
+### 在 switch 语句中添加默认选项
+在 switch 语句中，你可能无法用 case 枚举出所有可能的值。 相反，你可以添加 default 语句，它会在找不到相匹配的 case 语句之后执行。 你可以把它看作是 if/else 链中最后的那个 else 语句。
+
+default 语句应该被放到最后。
+```JavaScript
+switch (num) {
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+...
+  default:
+    defaultStatement;
+    break;
+}
+```
+### 在 Switch 语句添加多个相同选项
+如果你忘了给 switch 的每一条 case 添加 break，那么后续的 case 会一直执行，直到遇见 break 为止。 如果你想为 switch 中的多个不同的输入设置相同的结果，可以这样写：
+```JavaScript
+let result = "";
+switch(val) {
+  case 1:
+  case 2:
+  case 3:
+    result = "1, 2, or 3";
+    break;
+  case 4:
+    result = "4 alone";
+}
+```
+这样，1、2、3 都会有相同的结果。
+### 用一个 Switch 语句来替代多个 if else 语句
+如果你有多个选项需要选择，switch 语句写起来会比多个串联的 if/else if 语句容易些。 譬如:
+```JavaScript
+if (val === 1) {
+  answer = "a";
+} else if (val === 2) {
+  answer = "b";
+} else {
+  answer = "c";
+}
+```
+可以被下面替代：
+```JavaScript
+switch(val) {
+  case 1:
+    answer = "a";
+    break;
+  case 2:
+    answer = "b";
+    break;
+  default:
+    answer = "c";
+}
+```
+## 从函数返回布尔值
+你应该还记得相等运算符这道挑战题。 在那里我们提到，所有比较操作符都会返回 boolean：要么是 true 要么是 false。
+
+有时人们通过 if/else 语句来做比较，像这样。
+```JavaScript
+function isEqual(a, b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+```
+但有更好的方式来达到相同的效果。 既然 === 返回 true 或 false 我们可以直接返回比较结果：
+```JavaScript
+function isEqual(a, b) {
+  return a === b;
+}
+```
+## 函数执行到 return 语句就结束
+当代码执行到 return 语句时，函数返回一个结果就结束运行了，return 后面的语句不会执行。
+
+示例
+```JavaScript
+function myFun() {
+  console.log("Hello");
+  return "World";
+  console.log("byebye")
+}
+myFun();
+```
+以上将在控制台中显示字符串 Hello 并返回字符串 World。 字符串 byebye 将永远不会在控制台中显示，因为函数在 return 语句处就退出了。
