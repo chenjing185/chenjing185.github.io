@@ -165,9 +165,9 @@ tags:
 # 代码高亮
 codeblock:
   copy_btn: true
-  prismjs: 
-    light: https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.css
-    dark: https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism-dark.css
+prismjs: 
+  light: https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.css
+  dark: https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism-dark.css
 
 # 文章目录
 toc:
