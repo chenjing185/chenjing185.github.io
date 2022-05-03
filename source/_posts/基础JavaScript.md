@@ -837,3 +837,63 @@ console.log(someObj[someProp]);
 someProp 的值将为字符串 propName，并且字符串 John 将会出现在控制台中。
 
 注意，当使用变量名访问属性时，我们没有使用引号包裹它，因为我们正在使用的是变量的值，而不是变量的名字。
+## 更新对象属性
+在你创建了 JavaScript 对象后，你可以随时更新它的属性，就像更新任何其他变量那样。 你可以使用点或中括号操作符来更新。
+
+举个例子，让我们看看 ourDog：
+```JavaScript
+const ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+```
+既然他是一个特别愉快的狗，让我们将他的名字更改为字符串 Happy Camper。 这有两种方式来更新对象的 name 属性： ourDog.name = "Happy Camper"; 或 ourDog["name"] = "Happy Camper";。更新后，ourDog.name 的值就不再是 Camper，而是 Happy Camper。
+## 给 JavaScript 对象添加新属性
+你也可以像更改属性一样给 JavaScript 对象添加属性。
+
+这里展示了如何给 ourDog 添加一个属性 bark：
+```JavaScript
+ourDog.bark = "bow-wow";
+```
+或者
+```JavaScript
+ourDog["bark"] = "bow-wow";
+```
+现在，当我们执行 ourDog.bark 时，就能得到他的叫声，bow-wow。
+
+例如：
+```JavaScript
+const ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+```
+ourDog.bark = "bow-wow";
+## 删除对象的属性
+我们同样可以删除对象的属性，例如：
+
+delete ourDog.bark;
+例如：
+```JavaScript
+const ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"],
+  "bark": "bow-wow"
+};
+```
+delete ourDog.bark;
+在上面代码的最后一行中，ourDog 是这样的：
+```JavaScript
+{
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+}
+```
