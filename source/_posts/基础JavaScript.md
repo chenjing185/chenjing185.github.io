@@ -744,3 +744,96 @@ function myFun() {
 myFun();
 ```
 以上将在控制台中显示字符串 Hello 并返回字符串 World。 字符串 byebye 将永远不会在控制台中显示，因为函数在 return 语句处就退出了。
+## 创建 JavaScript 对象
+你之前可能听过 object 这个词。
+
+对象和 arrays 类似，区别在于数组使用索引来访问和修改数据，而对象中的数据是通过 properties 访问的。
+
+对象非常适合用来存储结构化数据，可以表示真实世界中的物体，比如一只猫。
+
+这里是一个猫对象的样本：
+```JavaScript
+const cat = {
+  "name": "Whiskers",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["Water", "Dogs"]
+};
+```
+在此示例中，所有属性都存储为字符串，例如 name、legs 和 tails。 然而，你也可以使用数字作为属性。 你甚至可以省略单字字符串属性中的引号，如下所示：
+```JavaScript
+const anotherObject = {
+  make: "Ford",
+  5: "five",
+  "model": "focus"
+};
+```
+然而，如果你的对象有非字符串属性的话，JavaScript 会自动将它们转为字符串。
+## 通过点号表示法访问对象属性
+和访问数组类似，访问对象属性有两种方式：点号表示法（.）和方括号表示法（[]）。
+
+如果我们已经提前知道要访问的属性名，使用点号表示法是最方便的。
+
+这里是一个用点符号（.）读取对象属性的示例：
+```JavaScript
+const myObj = {
+  prop1: "val1",
+  prop2: "val2"
+};
+```
+const prop1val = myObj.prop1;
+const prop2val = myObj.prop2;
+prop1val 的值将为字符串 val1，并且prop2val 的值将为字符串 val2。
+## 使用方括号表示法访问对象属性
+访问对象属性的第二种方式是方括号表示法（[]）。 如果你想访问的属性名中包含空格，就必须使用方括号表示法来获取它的属性值。
+
+当然，如果属性名不包含空格，也可以使用方括号表示法。
+
+这是一个使用方括号表示法读取对象属性的例子：
+```JavaScript
+const myObj = {
+  "Space Name": "Kirk",
+  "More Space": "Spock",
+  "NoSpace": "USS Enterprise"
+};
+
+myObj["Space Name"];
+myObj['More Space'];
+myObj["NoSpace"];
+```
+myObj["Space Name"] 将会是字符串 Kirk，myObj['More Space'] 将会是字符串 Spock，并且myObj["NoSpace"] 将会是字符串 USS Enterprise。
+
+> **注意**，如果属性名中包含空格，就必须使用引号（单引号或双引号）将它们包裹起来。
+## 通过变量访问对象属性
+对对象上使用方括号表示法，还可以访问对象上作为变量值存储的属性。 当你需要遍历对象的所有属性，或者根据一个变量的值查找对应的属性值时，这种写法尤其适用。
+
+以下是一个使用变量来访问属性的例子：
+
+const dogs = {
+  Fido: "Mutt",
+  Hunter: "Doberman",
+  Snoopie: "Beagle"
+};
+
+const myDog = "Hunter";
+const myBreed = dogs[myDog];
+console.log(myBreed);
+字符串 Doberman 将会出现在控制台中。
+
+使用这一概念的另一种情况是：属性的名字是在程序运行期间动态收集得到的。如下所示：
+```JavaScript
+const someObj = {
+  propName: "John"
+};
+
+function propPrefix(str) {
+  const s = "prop";
+  return s + str;
+}
+
+const someProp = propPrefix("Name");
+console.log(someObj[someProp]);
+```
+someProp 的值将为字符串 propName，并且字符串 John 将会出现在控制台中。
+
+注意，当使用变量名访问属性时，我们没有使用引号包裹它，因为我们正在使用的是变量的值，而不是变量的名字。
