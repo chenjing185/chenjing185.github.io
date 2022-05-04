@@ -886,10 +886,11 @@ const myObj = {
   prop1: "val1",
   prop2: "val2"
 };
-</script>
-```
+
 const prop1val = myObj.prop1;
 const prop2val = myObj.prop2;
+</script>
+```
 prop1val 的值将为字符串 val1，并且prop2val 的值将为字符串 val2。
 ## 使用方括号表示法访问对象属性
 访问对象属性的第二种方式是方括号表示法（[]）。 如果你想访问的属性名中包含空格，就必须使用方括号表示法来获取它的属性值。
@@ -1060,3 +1061,65 @@ myObj.hasOwnProperty("middle");
 </script>
 ```
 第一个 hasOwnProperty 返回 true，第二个返回 false。
+## 操作复杂对象
+有时你可能希望将数据存储在一个灵活的数据结构（Data Structure）中。 JavaScript 对象是一种灵活的数据结构。 它可以储存字符串（strings）、数字（numbers）、布尔值（booleans）、数组（arrays）、函数（functions）和对象（objects）以及这些值的任意组合。
+
+这是一个复杂数据结构的示例：
+```html
+<script>
+const ourMusic = [
+  {
+    "artist": "Daft Punk",
+    "title": "Homework",
+    "release_year": 1997,
+    "formats": [ 
+      "CD", 
+      "Cassette", 
+      "LP"
+    ],
+    "gold": true
+  }
+];
+</script>
+```
+这是一个包含一个对象的数组。 该对象有关于专辑的各种元数据（metadata）。 它也有一个嵌套的 formats 数组。 可以将专辑添加到顶级数组来增加更多的专辑记录。 对象将数据以一种键 - 值对的形式保存。 在上面的示例中，"artist": "Daft Punk" 有一个键为 artist 值为 Daft Punk 的属性。 JavaScript Object Notation 简称 JSON 是可以用于存储数据的数据交换格式。
+```html
+<script>
+{
+  "artist": "Daft Punk",
+  "title": "Homework",
+  "release_year": 1997,
+  "formats": [ 
+    "CD",
+    "Cassette",
+    "LP"
+  ],
+  "gold": true
+}
+</script>
+```
+> **提示**：数组中有多个 JSON 对象的时候，对象与对象之间要用逗号隔开。
+## 访问嵌套对象
+我们可以通过连续使用点号表示法和方括号表示法来访问对象的嵌套属性。
+
+这是一个嵌套对象：
+```html
+<script>
+const ourStorage = {
+  "desk": {
+    "drawer": "stapler"
+  },
+  "cabinet": {
+    "top drawer": { 
+      "folder1": "a file",
+      "folder2": "secrets"
+    },
+    "bottom drawer": "soda"
+  }
+};
+
+ourStorage.cabinet["top drawer"].folder2;
+ourStorage.desk.drawer;
+</script>
+```
+ourStorage.cabinet["top drawer"].folder2 将会是字符串 secrets，并且 ourStorage.desk.drawer 将会是字符串 stapler。
