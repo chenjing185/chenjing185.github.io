@@ -897,3 +897,42 @@ delete ourDog.bark;
   "friends": ["everything!"]
 }
 ```
+## 使用对象进行查找
+对象和字典一样，可以用来存储键/值对。 如果数据是扁平的，你可以用对象来查找你想要的值，而不是链式使用 switch 或 if/else 语句。 当你知道你的输入数据在某个范围时，这种查找方式极为有效。
+
+这是简单的反向字母表：
+```JavaScript
+const alpha = {
+  1:"Z",
+  2:"Y",
+  3:"X",
+  4:"W",
+  ...
+  24:"C",
+  25:"B",
+  26:"A"
+};
+
+alpha[2];
+alpha[24];
+
+const value = 2;
+alpha[value];
+```
+alpha[2] 是字符串 Y，alpha[24] 是字符串 C，alpha[value] 是字符串 Y。
+## 测试对象的属性
+有时检查一个对象属性是否存在是非常有用的。 我们可以用对象的 .hasOwnProperty(propname) 方法来检查对象是否有指定的属性。 .hasOwnProperty() 找到该属性时返回 true，找不到该属性时返回 false。
+
+示例
+```html
+<script>
+const myObj = {
+  top: "hat",
+  bottom: "pants"
+};
+
+myObj.hasOwnProperty("top");
+myObj.hasOwnProperty("middle");
+</script>
+```
+第一个 hasOwnProperty 返回 true，第二个返回 false。
