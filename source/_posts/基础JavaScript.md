@@ -1405,7 +1405,8 @@ function findGreaterOrEqual(a, b) {
 会有一个 base case。 base case 告诉递归函数什么时候不再需要调用其自身。 这是简单 情况，返回得到的值。 还有 recursive call，继续用不同的参数调用自身。 如果函数无误，一直执行直到 base case 为止。
 
 比如，如果想写一个递归函数，返回一个数字 1 到 n 的连续数组。 这个函数需要接收一个参数 n 代表最终数字。 然后会持续的调用自身，传入一个比 n 更小的值一直到传入的值是 1 为止。 函数如下：
-
+```html
+<script>
 function countup(n) {
   if (n < 1) {
     return [];
@@ -1416,6 +1417,8 @@ function countup(n) {
   }
 }
 console.log(countup(5));
+</script>
+```
 值 [1, 2, 3, 4, 5] 将显示在控制台中。
 
 起初，这似乎是违反直觉的，因为 n 的值递减，但是最终数组中的值却递增。 之所以发生这种情况，是因为在递归调用返回之后，才调用 push。 在将 n pushed 进数组时，countup(n - 1) 已经调用赋值成功并返回了 [1, 2, ..., n - 1]。
