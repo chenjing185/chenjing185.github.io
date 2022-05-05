@@ -1123,3 +1123,299 @@ ourStorage.desk.drawer;
 </script>
 ```
 ourStorage.cabinet["top drawer"].folder2 将会是字符串 secrets，并且 ourStorage.desk.drawer 将会是字符串 stapler。
+## 访问嵌套数组
+在之前的挑战中，我们学习了在对象中嵌套对象和数组。 与访问嵌套对象类似，数组的方括号可以用来对嵌套数组进行链式访问。
+
+下面是访问嵌套数组的例子：
+```html
+<script>
+const ourPets = [
+  {
+    animalType: "cat",
+    names: [
+      "Meowzer",
+      "Fluffy",
+      "Kit-Cat"
+    ]
+  },
+  {
+    animalType: "dog",
+    names: [
+      "Spot",
+      "Bowser",
+      "Frankie"
+    ]
+  }
+];
+
+ourPets[0].names[1];
+ourPets[1].names[0];
+</script>
+```
+ourPets[0].names[1] 应该是字符串 Fluffy， 并且 ourPets[1].names[0] 应该是字符串 Spot。
+## while 循环
+你可以使用循环多次执行相同的代码。
+
+我们将学习的第一种类型的循环称为 while 循环，当 while 指定的条件为真，循环才会执行，反之不执行。
+```html
+<script>
+const ourArray = [];
+let i = 0;
+
+while (i < 5) {
+  ourArray.push(i);
+  i++;
+}
+</script>
+```
+在上面的代码里，while 循环执行 5 次把 0 到 4 的数字添加到 ourArray 数组里。
+## for 循环
+你可以使用循环多次执行相同的代码。
+
+JavaScript 中最常见的循环就是 for，它可以循环指定次数。
+
+for 循环中的可选三个表达式用分号隔开：
+
+for (a; b; c)，其中a为初始化语句，b为条件语句，c 是最终的表达式。
+
+初始化语句只会在执行循环开始之前执行一次。 它通常用于定义和设置你的循环变量。
+
+循环条件语句会在每一轮循环的开始前执行，只要条件判断为 true 就会继续执行循环。 当条件为 false 的时候，循环将停止执行。 这意味着，如果条件在一开始就为 false，这个循环将不会执行。
+
+终止循环表达式在每次循环迭代结束， 在下一个条件检查之前时执行，通常用来递增或递减循环计数。
+
+在下面的例子中，先初始化 i = 0，条件 i < 5 为 true 时，进入循环。 每次循环后 i 的值增加 1，然后执行终止循环条件表达式 i++。
+```html
+<script>
+const ourArray = [];
+
+for (let i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+</script>
+```
+ourArray 现在的值为 [0, 1, 2, 3, 4]。
+## 使用 For 循环遍历数组
+JavaScript 中的一个常见任务是遍历数组的内容。 一种方法是使用 for 循环。 下面的代码将输出数组 arr 的每个元素到控制台：
+```html
+<script>
+const arr = [10, 9, 8, 7, 6];
+
+for (let i = 0; i < arr.length; i++) {
+   console.log(arr[i]);
+}
+</script>
+```
+记住数组的索引从零开始的，这意味着数组的最后一个元素的下标是：length - 1（数组的长度 -1）。 我们这个循环的条件是 i < arr.length，当 i 的值为 length 的时候循环就停止了。 在这个例子中，最后一个循环是 i === 4，也就是说，当 i 的值等于 arr.length - 1 时，结果输出 6。 然后 i 增加到 5，循环会终止，因为 i < arr.length 是 false。
+## 循环嵌套
+如果你有一个二维数组，可以使用相同的逻辑，先遍历外面的数组，再遍历里面的子数组。 下面是一个例子：
+```html
+<script>
+const arr = [
+  [1, 2], [3, 4], [5, 6]
+];
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    console.log(arr[i][j]);
+  }
+}
+</script>
+```
+这里一次输出了 arr 中的每个子元素。 提示，对于内部循环，我们可以通过 arr[i] 的 .length 来获得子数组的长度，因为 arr[i] 本身就是一个数组。
+## do...while 循环
+下一种循环叫作 do...while 循环。 它被称为 do...while 循环，是因为不论什么情况，它都会首先 do（运行）循环里的第一部分代码，然后 while（当）规定的条件被评估为 true（真）的时候，它会继续运行循环。
+```html
+<script>
+const ourArray = [];
+let i = 0;
+
+do {
+  ourArray.push(i);
+  i++;
+} while (i < 5);
+</script>
+```
+上面的示例行为类似于其他类型的循环，由此产生的数组将看起来像 [0, 1, 2, 3, 4]。 然而，do...while 不同于其他循环的地方，是第一次循环检查失败时的行为。 让我们看看代码中的区别：这里是一个常规的 while 循环，只要 i < 5，就会在循环中运行代码：
+```html
+<script>
+const ourArray = []; 
+let i = 5;
+
+while (i < 5) {
+  ourArray.push(i);
+  i++;
+}
+</script>
+```
+这个例子中，定义了一个空数组 ourArray 以及一个值为 5 的 i 。 当执行 while 循环时，因为 i 不小于 5，所以循环条件为 false，循环内的代码将不会执行。 ourArray 最终没有添加任何内容，因此示例中的所有代码执行完时，ourArray 仍然是[]。 现在，看一下 do...while 循环。
+```html
+<script>
+const ourArray = []; 
+let i = 5;
+
+do {
+  ourArray.push(i);
+  i++;
+} while (i < 5);
+</script>
+```
+在这里，和使用 while 循环一样，将 i 的值初始化为 5。 执行下一行时，没有执行循环检查，直接执行花括号内的代码。 数组会添加一个元素，并在进行条件检查之前递增 i。 然后，在条件检查时因为 i 等于 6 不符合条件 i < 5，所以退出循环。 最终 ourArray 的值是 [5]。 本质上，do...while 循环确保循环内的代码至少运行一次。 让我们通过 do...while 循环将值添加到数组中。
+## 使用递归代替循环
+递归是函数调用自身的操作。 为了便于理解，有如下任务：计算数组内元素前 n 的元素乘积。 使用 for 循环， 可以这样做：
+```html
+<script>
+  function multiply(arr, n) {
+    let product = 1;
+    for (let i = 0; i < n; i++) {
+      product *= arr[i];
+    }
+    return product;
+  }
+</script>
+```
+下面是递归写法，注意代码里的 multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]。 这意味着可以重写 multiply 以调用自身而无需依赖循环。
+```html
+<script>
+  function multiply(arr, n) {
+    if (n <= 0) {
+      return 1;
+    } else {
+      return multiply(arr, n - 1) * arr[n - 1];
+    }
+  }
+</script>
+```
+递归版本的 multiply 详述如下。 在 base case 里，也就是 n <= 0 时，返回 1。 在 n 比 0 大的情况里，函数会调用自身，参数 n 的值为 n - 1。 函数以相同的方式持续调用 multiply，直到 n <= 0 为止。 所以，所有函数都可以返回，原始的 multiply 返回结果。
+
+> **注意**： 递归函数在没有函数调用时（在这个例子是，是当 n <= 0 时）必需有一个跳出结构，否则永远不会执行完毕。
+## 使用 JavaScript 生成随机整数
+生成随机小数很棒，但随机数更有用的地方在于生成随机整数。
+
+用 Math.random() 生成一个随机小数。
+把这个随机小数乘以 20。
+用 Math.floor() 向下取整，获得它最近的整数。
+记住 Math.random() 永远不会返回 1。同时因为我们是在向下取整，所以最终我们获得的结果不可能有 20。 这确保了我们获得了一个在 0 到 19 之间的整数。
+
+把操作连缀起来，代码类似于下面：
+```html
+<script>
+Math.floor(Math.random() * 20);
+</script>
+```
+我们先调用 Math.random()，把它的结果乘以 20，然后把上一步的结果传给 Math.floor()，最终通过向下取整获得最近的整数。
+## 生成某个范围内的随机整数
+我们之前生成的随机数是在 0 到某个数之间，现在我们要生成的随机数是在两个指定的数之间。
+
+我们需要定义一个最小值 min 和一个最大值 max。
+
+下面是我们将要使用的方法， 仔细看看并尝试理解这行代码到底在干嘛：
+```html
+<script>
+Math.floor(Math.random() * (max - min + 1)) + min
+</script>
+```
+## 使用 parseInt 函数
+parseInt() 函数解析一个字符串返回一个整数。 下面是一个示例：
+```html
+<script>
+const a = parseInt("007");
+</script>
+```
+上述函数将字符串 007 转换为整数 7。 如果字符串中的第一个字符不能转换为数字，则返回 NaN。
+## 使用 parseInt 函数并传入一个基数
+parseInt() 函数解析一个字符串并返回一个整数。 它还可以传入第二个参数，指定了字符串中数字的基数。 基数可以是 2 到 36 之间的整数。
+
+函数调用如下所示：
+
+parseInt(string, radix);
+这是一个示例：
+```html
+<script>
+const a = parseInt("11", 2);
+</script>
+```
+变量 radix 表示 11 是在二进制系统中。 这个示例将字符串 11 转换为整数 3。
+## 使用三元运算符
+条件运算符（ conditional operator,）（也称为三元运算符（ ternary operator））的就像写成一行的 if-else 表达式
+
+语法是：a ? b : c, where a 是条件，当条件返回 true 的时候运行代码 b，当条件返回 false 的时候运行代码 c。
+
+以下函数使用 if/else 语句来检查条件：
+```html
+<script>
+function findGreater(a, b) {
+  if(a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater or equal";
+  }
+}
+</script>
+```
+这可以使用三元运算符重写：
+```html
+<script>
+function findGreater(a, b) {
+  return a > b ? "a is greater" : "b is greater or equal";
+}
+</script>
+```
+## 使用多个三元运算符
+你也可以将多个运算符串联在一起以检查多种条件。
+
+下面的函数使用 if，else if 和 else 语句来检查多个条件：
+```html
+<script>
+function findGreaterOrEqual(a, b) {
+  if (a === b) {
+    return "a and b are equal";
+  }
+  else if (a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater";
+  }
+}
+</script>
+```
+以上函数可以使用多个三元运算符重写：
+```html
+<script>
+function findGreaterOrEqual(a, b) {
+  return (a === b) ? "a and b are equal" 
+    : (a > b) ? "a is greater" 
+    : "b is greater";
+}
+</script>
+```
+如上文所示，对多个三元运算符进行每个条件都是单独一行的格式化被认为是最佳做法。 使用多个三元运算符而没有适当的缩进可能会使您的代码难以理解。 例如：
+```html
+<script>
+function findGreaterOrEqual(a, b) {
+  return (a === b) ? "a and b are equal" : (a > b) ? "a is greater" : "b is greater";
+}
+</script>
+```
+## 使用递归创建一个倒计时
+现在来学习一个更复杂的函数，函数返回一个从 1 到传递给函数的指定数字的连续数字数组。
+
+会有一个 base case。 base case 告诉递归函数什么时候不再需要调用其自身。 这是简单 情况，返回得到的值。 还有 recursive call，继续用不同的参数调用自身。 如果函数无误，一直执行直到 base case 为止。
+
+比如，如果想写一个递归函数，返回一个数字 1 到 n 的连续数组。 这个函数需要接收一个参数 n 代表最终数字。 然后会持续的调用自身，传入一个比 n 更小的值一直到传入的值是 1 为止。 函数如下：
+
+function countup(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countup(n - 1);
+    countArray.push(n);
+    return countArray;
+  }
+}
+console.log(countup(5));
+值 [1, 2, 3, 4, 5] 将显示在控制台中。
+
+起初，这似乎是违反直觉的，因为 n 的值递减，但是最终数组中的值却递增。 之所以发生这种情况，是因为在递归调用返回之后，才调用 push。 在将 n pushed 进数组时，countup(n - 1) 已经调用赋值成功并返回了 [1, 2, ..., n - 1]。
