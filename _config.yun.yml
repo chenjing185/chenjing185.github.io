@@ -44,7 +44,7 @@ pages:
     color: hotpink
   - name: 我的相册
     url: /albums/
-    icon: icon-train-line
+    icon: icon-image-line
     color: Aqua 
 
 # 相册
