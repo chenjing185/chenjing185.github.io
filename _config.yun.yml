@@ -45,7 +45,7 @@ pages:
   - name: 我的相册
     url: /albums/
     icon: icon-camera-line
-    color: Aqua
+    color: dodgerblue
 
 # 相册
 albums:
