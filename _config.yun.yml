@@ -45,7 +45,7 @@ pages:
   - name: 我的相册
     url: /albums/
     icon: icon-image-line
-    color: Aqua 
+    color: Cyan
 
 # 相册
 albums:
