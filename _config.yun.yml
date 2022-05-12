@@ -93,14 +93,6 @@ wordcount:
 cdn:
   pre: https://cdn.jsdelivr.net/gh/chenjing185/chenjing185.github.io@latest
 
-# 图片背景
-bg_image:
-  enable: true
-  url: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-0-blur-30px.jpg
-  dark: /images/dark.jpg
-  # blur: 30px # 设置背景模糊程度
-  opacity: 0.8
-
 # 首页标语动画
 banner:
   enable: true
