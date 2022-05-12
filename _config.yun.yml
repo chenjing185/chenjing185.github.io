@@ -28,6 +28,11 @@ post_meta:
   categories: true
   tags: true
 
+# 图标
+head:
+  js:
+    async: https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons.js
+
 # 女孩们
 girls:
   enable: true
@@ -44,7 +49,7 @@ pages:
     color: hotpink
   - name: 我的相册
     url: /albums/
-    icon: icon-camera-line
+    icon: ion-icon albums
     color: dodgerblue
 
 # 相册
