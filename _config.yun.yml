@@ -51,6 +51,10 @@ pages:
 albums:
   enable: true
 
+# pjax
+pjax:
+  enable: true
+
 # 文章分类链接-点击标题跳转链接
 types:
   link:
@@ -114,6 +118,16 @@ github_issues:
   username: chenjing185
   repository: chenjing185.github.io
   filters: is:issue
+
+# 分析统计
+busuanzi:
+  enable: true
+  site_uv: true
+  site_uv_icon: icon-user-line
+  site_pv: true
+  site_pv_icon: icon-eye-line
+  page_pv: true
+  page_pv_icon: icon-eye-line
 
 # 鼠标效果
 cursor:
