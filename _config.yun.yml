@@ -115,16 +115,6 @@ github_issues:
   repository: chenjing185.github.io
   filters: is:issue
 
-# 分析统计
-busuanzi:
-  enable: true
-  site_uv: true
-  site_uv_icon: icon-user-line
-  site_pv: true
-  site_pv_icon: icon-eye-line
-  page_pv: true
-  page_pv_icon: icon-eye-line
-
 # 鼠标效果
 cursor:
   enable: true
