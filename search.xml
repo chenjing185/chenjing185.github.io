@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Django搭建一个简单的博客</title>
+      <link href="/2022/06/15/Django%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2022/06/15/Django%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[<p><strong>首页图片</strong></p><p><img src="https://cdn.jsdelivr.net/gh/chenjing185/chenjing185.github.io@latest/images/project/article.png" loading="lazy"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Django </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基础算法</title>
       <link href="/2022/05/12/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/"/>
       <url>/2022/05/12/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/</url>
